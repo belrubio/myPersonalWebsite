@@ -49,7 +49,7 @@
     img:hover{
         filter: none;
         -webkit-filter: grayscale(0);
-        -webkit-transform: scale(1.01);
+        -webkit-transform: scale(1.02);
     }
 
 }
@@ -60,9 +60,11 @@ figure {
     border: 0px dotted gray;
     margin: 0px; /* adjust as needed */
 }
+
 figure img {
     vertical-align: top;
 }
+
 figure figcaption {
     border: 0px dotted blue;
     text-align: center;
@@ -154,9 +156,15 @@ figure figcaption {
 
 	&[data-columns="3"] {
 
-		.gallery__item {
-			width: 33.33%;
-		}
+            .gallery__item {
+                width: 100%;
+        }
+
+        @include mq(tabletp) {
+		    .gallery__item {
+			    width: 33.33%;
+		    }
+        }
 	}
 
 	&[data-columns="4"] {

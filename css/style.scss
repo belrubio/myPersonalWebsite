@@ -8,7 +8,6 @@
 @import "_plugins";
 
 
-
 // - - - - - - - - - - Variables
 
 
@@ -27,7 +26,7 @@ $error-color: #D64541;
 
 
 // Fonts
-
+$fa-font-path: "fonts/font-awesome/";
 $body-font: {{ site.data.settings.font_settings.body_font }};
 $title-font: {{ site.data.settings.font_settings.title_font }};
 
