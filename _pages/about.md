@@ -1,7 +1,7 @@
 ---
 title: About me
 description: I'm a researcher in neuroscience.
-subtitle: I'm a researcher in clinical and behavioural neuroscience.
+subtitle: .
 ---
 I'm a post-doctoral researcher at the [SPECS lab](https://specs.ibecbarcelona.eu/)  from the Institute for Bioengineering of Catalonia (IBEC). My work aims at identifying the principles of motor recovery after brain injury and developing technological solutions for neurorehabilitation.
 
