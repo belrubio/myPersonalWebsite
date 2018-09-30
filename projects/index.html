@@ -1,0 +1,24 @@
+---
+layout: default
+title: Projects
+description: Nothing
+featured_image: /images/social.jpg
+---
+
+<section class="listing-post">
+	<div class="wrap">
+            <div class="gallery" data-columns="3">
+                {% for project in site.projects reversed %}
+                
+                <figure class="gallery__item" >
+                    <a href={{ project.url }} > <img src="{{ project.url }}" class="listing-post__image" style="background-image: url({{ project.featured_image  }});" alt="" /> </a>
+                    <p class="half-line"> </p>
+                <figcaption> {{ project.title }} </figcaption>
+                </figure>
+                
+                {% endfor %}
+            
+            </div>
+    </div>
+
+</section>
