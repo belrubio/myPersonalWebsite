@@ -8,7 +8,14 @@ I'm a post-doctoral researcher at the [SPECS lab](https://specs.ibecbarcelona.eu
 ### Education
 
 * Ph.D. in Information and Communication Technologies for Neurorehabilitation – [Pompeu Fabra University](https://www.upf.edu/web/csim/entry/-/-/25811/adscripcion/belen-rubio) (2016) 
-* Master in Cognitive Systems and Interactive Media - [Pompeu Fabra University (2010)](https://www.upf.edu/web/csim/entry/-/-/25811/adscripcion/belen-rubio) (2016) 
+* Master in Cognitive Systems and Interactive Media - [Pompeu Fabra University (2010) ](https://www.upf.edu/web/csim/entry/-/-/25811/adscripcion/belen-rubio)
+
+### Research Projects
+
+- SANaR: Smart Autonomous Neuro-Rehabilitation. Ministerio De Economía Y Competitividad (MINECO). TIN2013-44200-R Principal Investigator: Paul Verschure (Universidad Pompeu Fabra)
+- eSMCs - extending sensorimotor contingencies to cognition. European Commission. FP7-ICT-2009-6-270212. Code acc. to the funding institution: 270212 Principal Investigator: Paul Verschure (Universidad Pompeu Fabra)
+- RGS - Rehabilitation Gaming System. AAL Ambient Assisted Living. PI08/90940 - AAL 208-1-119  Principal Investigator: Paul Verschure (Universidad Pompeu Fabra)
+- Interventions on emotional responses to pain stimuli in patients with chronic neuropathic pain. Fundació La Marató. Principal Investigator: Paul Verschure (Universidad Pompeu Fabra)
 
 ### Teaching experience
 
