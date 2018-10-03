@@ -20,17 +20,17 @@
 
 	<!-- Page Info -->
 	<link rel="shortcut icon" href="/images/favicon.png">
-	<title>Recovery Model – Belén Rubio Ballester</title>
+	<title>Learned Non-Use Recovery Model – Belén Rubio Ballester</title>
 	<meta name="description" content="">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Recovery Model – Belén Rubio Ballester">
+	<meta name="twitter:title" content="Learned Non-Use Recovery Model – Belén Rubio Ballester">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image:src" content="http://localhost:4000/images/projects/LNU_model.png">
 
 	<!-- Facebook OpenGraph -->
-	<meta property="og:title" content="Recovery Model – Belén Rubio Ballester" />
+	<meta property="og:title" content="Learned Non-Use Recovery Model – Belén Rubio Ballester" />
 	<meta property="og:description" content="" />
 	<meta property="og:image" content="http://localhost:4000/images/projects/LNU_model.png" />
 
@@ -220,20 +220,168 @@
 	
 	<div class="page">
 
-		<div class="page__content" data-page-title="Recovery Model – Belén Rubio Ballester" data-image="/images/projects/LNU_model.png">
+		<div class="page__content" data-page-title="Learned Non-Use Recovery Model – Belén Rubio Ballester" data-image="/images/projects/LNU_model.png">
 
 			<section class="single">
 
 	<div class="wrap">
 
-		<h1>Recovery Model</h1>
-		<p class="subtitle">A functional model of Learned Non-Use after Stroke</p>
+		<h1>Learned Non-Use Recovery Model</h1>
+		<p class="subtitle">A functional model of Learned Non-Use after stroke</p>
 
 		<h6 id="cdac---the-role-of-consciousness-in-adaptive-behavior-a-combined-empirical-computational-and-robot-based-approach-erc-advanced-grant-fp7-ideas-erc-principal-investigator-paul-verschure-universidad-pompeu-fabra"><strong><a href="https://cordis.europa.eu/project/rcn/192386_en.html">cDAC - The role of consciousness in adaptive behavior: A combined empirical, computational and robot based approach. ERC Advanced Grant FP7-IDEAS-ERC Principal Investigator: Paul Verschure (Universidad Pompeu Fabra)</a></strong></h6>
 
-<h4 id="implementation-of-a-computational-functional-model-of-recovery-after-stroke-that-establishes-a-closed-loop-between-arm-use-functional-recovery-and-cortical-reorganization-han-et-al-2008-hidaka-et-al-2012-schweighofer-et-al-2009-we-extended-and-applied-this-model-to-formulate-predictions-about-the-clinical-outcome-of-different-therapy-combinations-based-on-contraint-induced-movement-therapy-and-reinforcement">Implementation of a computational functional model of recovery after stroke that establishes a closed loop between arm use, functional recovery, and cortical reorganization (Han et al., 2008; Hidaka et al., 2012; Schweighofer et al., 2009). We extended and applied this model to formulate predictions about the clinical outcome of different therapy combinations based on contraint induced movement therapy and reinforcement.</h4>
+<p>Implementation of a computational functional model of recovery after stroke that establishes a closed loop between arm use, functional recovery, and cortical reorganization (Han et al., 2008; Hidaka et al., 2012; Schweighofer et al., 2009). We extended and applied this model to formulate predictions about the clinical outcome of different therapy combinations based on constraint induced movement therapy and reinforcement.</p>
 
-<p><img src="/images/projects/LNU_model01.png" alt="" /></p>
+<h3 id="getting-started"><strong>Getting Started</strong></h3>
+
+<p>If you are interested in obtaining the program and running it in your machine, you can download an executable file from
+<a download="" href="https://github.com/belrubio/LNU_model/dist/LNU_model_MAC_OS_X">here</a>.</p>
+
+<p>Please continue reading if you are interested in the source code of this project. The following instructions will get you a copy of the <strong><em>Leaned Non-Use Model</em></strong> project up and running on your local machine for development and testing purposes.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>To obtain the source code of the project you will need to either download it from <a href="https://github.com/belrubio/LNU_model">here</a> or to clone it with:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/belrubio/LNU_model
+</code></pre></div></div>
+<p>To run the program from the source code you may need to install some dependencies, such as Pillow and TKinter:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pillow
+pip install python3-tk
+
+</code></pre></div></div>
+
+<h2 id="how-to-use">How to Use</h2>
+
+<p>The deployment is pretty basic. After running the software a GUI will appear:</p>
+
+<p><img src="/images/projects/model/mainWindow.png" alt="" /></p>
+
+<p>The save buttons on the top left corner will generate a text file and save a list of the values given to the free parameters. Please notice that the free parameters introduced by default correspond with those reported in <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000133">Han et al., 2008</a> and <a href="https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-016-0178-x">Ballester et al., 2016</a>.</p>
+
+<p>The free parameters are shown on the top left corner refer to:</p>
+
+<ul>
+  <li>UD (0-1): Use-dependent learning rate</li>
+  <li>EB (0-1): Error-based learning rate</li>
+  <li>RB (0-1): Reinforcement-based learning rate</li>
+  <li>EL (0-100): Exploration Level or Noise in the hand selection decision making</li>
+  <li>NP (0-1): Non-Paretic Arm Bias/Hand Dominance (currently not used)</li>
+  <li>Number of trials: Number of trials to simulate</li>
+  <li>show 5 trials at: Trial number onset to play the animation for simulation for 5 consecutive trials.</li>
+</ul>
+
+<p>In the Recovery tab, 3 additional free parameters can be set:</p>
+
+<ul>
+  <li>Force (0-1): a normalized value indicating the probability of forcing the use of the paretic limb at each trial (set it to 0.3 for RIMT administration).</li>
+  <li>Gain (0-1): a normalized value indicating the ratio of extent amplification of the paretic limb movement (set it to 0.3 for RIMT administration).</li>
+  <li>Steer (0-1): a normalized value indicating the ratio of directional error reduction of the paretic limb movement (set it to 0.7 for RIMT administration).</li>
+</ul>
+
+<p>After introducing all the free parameters, press the button “Run Simulation” and wait until the final state of the model is computed. A window will pop-up to display a set of trials if configured at “Show trials at”:</p>
+
+<p><img src="/images/projects/model/trialSimulation.png" alt="" /></p>
+
+<p>When finished, figures will present the data of the simulation:</p>
+
+<p><img src="/images/projects/model/simulationsFinished.png" alt="" /></p>
+
+<p>In addition, three JSON files will be generated:</p>
+
+<ul>
+  <li>Trainned_model_<TAB_NAME>.json</TAB_NAME></li>
+  <li>Trainned_probabilities.json</li>
+  <li>Trainned_logs.json</li>
+</ul>
+
+<p>You will find them inside the main folder of the project. These files contain all the data describing the current state of the trained model. The parameters registered in this file include:</p>
+
+<h3 id="trainned_model_tab_namejson">Trainned_model_“TAB_NAME”.json</h3>
+<ul>
+  <li>The angle sensitivity associated to of each direction tunned neuron in the left cortex</li>
+  <li>The angle sensitivity associated to of each direction tunned neuron in the right cortex</li>
+  <li>The synaptic weight associated to of each neuron in the left cortex (direction coding network)</li>
+  <li>The synaptic weight associated to of each neuron in the right cortex (direction coding network)</li>
+  <li>The synaptic weight associated to of each neuron in the left cortex (extent coding network)</li>
+  <li>The synaptic weight associated to of each neuron in the right cortex (extent coding network)</li>
+</ul>
+
+<h3 id="trainned_probabilitiesjson">Trainned_probabilities.json</h3>
+<ul>
+  <li>Probabilities of right-hand selection for each target direction along the 360 degrees.</li>
+  <li>Probabilities of left-hand selection for each target direction along the 360 degrees.</li>
+  <li>List of target directions.</li>
+</ul>
+
+<h3 id="trainned_logsjson">Trainned_logs.json</h3>
+<ul>
+  <li>Hand selected per trial</li>
+  <li>Target direction per trial</li>
+  <li>Reaction Time per trial</li>
+  <li>The error of the left arm’s planned movement extent per trial</li>
+  <li>The error of the right arm’s planned movement extent per trial</li>
+  <li>The error of the left arm’s planned movement direction per trial</li>
+  <li>The error of the right arm’s planned movement direction per trial</li>
+  <li>Expected reward for the left arm movement per trial</li>
+  <li>Expected reward for the right arm movement per trial</li>
+  <li>Expected cost for the left arm movement per trial</li>
+  <li>Expected cost for the right arm movement per trial</li>
+  <li>Actual reward per trial</li>
+</ul>
+
+<p>Notice that a different JSON file of type Trainned_model_“TAB_NAME”.json will be generated for each tab after simulations are complete. However, Trainned_probabilities.json and Trainned_logs.json will be overwritten.</p>
+
+<h2 id="example">Example</h2>
+
+<p>Let’s now simulate a case. First, we will simulate a subject with no impairments. We go to tab “Training” and we provide 2,000 trials. At the end of the simulation we will observe a symmetric lateralization in the distribution of direction tunned cells (the two windrose plots on the right):</p>
+
+<p><img src="/images/projects/model/training.png" alt="" /></p>
+
+<p>Now let’s move to the tab “Stroke” and let’s provide 500 trials after generating a lesion. The results show a lack of cells devoted to the coding of movement directions toward the upper right corner:</p>
+
+<p><img src="/images/projects/model/stroke.png" alt="" /></p>
+
+<p>In the tab Rehabilitation, we can simulate high-intensity Constraint-Induced Movement Therapy (CIMT) by introducing a 0.7 value (normalized scale) in the Field Force. After 2000 trials we observe recovery:</p>
+
+<p><img src="/images/projects/model/recovery.png" alt="" /></p>
+
+<p>Moving to the last tab (“Follow-up”) we can simulate an additional trial window of no-therapy. We can introduce 2000 trials to study the stability of the model’s state after the rehabilitation treatment:</p>
+
+<p><img src="/images/projects/model/followup.png" alt="" /></p>
+
+<h2 id="built-with">Built With</h2>
+
+<ul>
+  <li><a href="https://www.python.org/">Python</a> - The programming language used</li>
+  <li><a href="https://www.pygame.org/">PyGame</a> - A cross-platform set of Python modules designed for writing video games</li>
+  <li><a href="https://wiki.python.org/moin/TkInter">TKinter</a> - Python’s de-facto standard GUI</li>
+  <li><a href="https://www.sublimetext.com/">Sublime</a> - The editor used</li>
+</ul>
+
+<h2 id="versioning">Versioning</h2>
+
+<p>We use <a href="http://semver.org/">SemVer</a> for versioning. For the versions available, see the <a href="https://github.com/belrubio/project/LNU_model">tags on this repository</a>.</p>
+
+<h2 id="authors">Authors</h2>
+
+<ul>
+  <li><strong>Belén Rubio Ballester</strong> - <em>Initial work</em> - <a href="https://www.belen.rubio.ballester.com">https://www.belenrubioballester.com</a></li>
+  <li><strong>Diogo Santos Pata</strong> - <em>Contributor</em> <a href="http://www.diogosantospata.com">https://www.diogosantospata.com</a></li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>This project is licensed under the GNU License v3 - see the <a href="https://github.com/belrubio/project/LNU_model/COPYING.txt">COPYING.txt</a> file for details.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<ul>
+  <li>Hat tip to anyone whose code was used</li>
+  <li>This project was supported by the <a href="https://cordis.europa.eu/project/rcn/192386_en.html">cDAC project</a>.</li>
+</ul>
 
 
 
